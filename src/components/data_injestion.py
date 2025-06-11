@@ -44,9 +44,3 @@ class dataIngestion:
             logging.info("Exeception occured")
             raise CustomException(e,sys)
         
-#calling the class
-if __name__=="__main__":
-    obj = dataIngestion()
-    train_data_path, test_data_path= obj.initiate_data_ingestion()
-    obj_trans = DataTransformation()
-    train_arr,test_arr,_ = obj_trans.initiate_data_transformation(train_data_path,test_data_path)
